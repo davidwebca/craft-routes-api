@@ -1,4 +1,4 @@
-# routes-api
+# craft-routes-api
 
 Adds a controller to generate a routes config file.
 
@@ -25,8 +25,8 @@ Open your terminal and run the following commands:
 cd /path/to/my-project.test
 
 # tell Composer to load the plugin
-composer require deuxhuithuit/routes-api
+composer require deuxhuithuit/craft-routes-api
 
 # tell Craft to install the plugin
-./craft plugin/install routes-api
+./craft plugin/install craft-routes-api
 ```
