@@ -1,9 +1,9 @@
 {
-    "name": "deuxhuithuit/craft-graphql-routes",
+    "name": "deuxhuithuit/routes-api",
 	"description": "Adds a controller to generate a routes config file.",
     "type": "craft-plugin",
 	"version": "1.0.0",
-    "license": "mit",
+    "license": "MIT",
 	"authors": [
 		{
 			"name": "Deux Huit Huit",
@@ -12,9 +12,9 @@
 	],
 	"support": {
 		"email": "open-source@deuxhuithuit.com",
-		"issues": "https://github.com/DeuxHuitHuit/craft-graphql-routes/issues?state=open",
-		"source": "https://github.com/DeuxHuitHuit/craft-graphql-routes",
-		"docs": "https://github.com/DeuxHuitHuit/craft-graphql-routes/blob/main/README.md"
+		"issues": "https://github.com/DeuxHuitHuit/routes-api/issues?state=open",
+		"source": "https://github.com/DeuxHuitHuit/routes-api",
+		"docs": "https://github.com/DeuxHuitHuit/routes-api/blob/main/README.md"
 	},
     "require": {
         "php": ">=8.0.2",
@@ -26,13 +26,13 @@
     },
     "autoload": {
         "psr-4": {
-            "deuxhuithuit\\craftgraphqlroutes\\": "src/"
+            "deuxhuithuit\\routesapi\\": "src/"
         }
     },
     "extra": {
-        "handle": "graphql-routes",
-        "name": "graphql-routes",
-        "developer": "felix"
+        "handle": "routes-api",
+        "name": "Routes API",
+		"hasCpSettings": false
     },
     "scripts": {
         "check-cs": "ecs check --ansi",

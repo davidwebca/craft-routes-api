@@ -1,6 +1,6 @@
 <?php
 
-namespace deuxhuithuit\craftgraphqlroutes\controllers;
+namespace deuxhuithuit\routesapi\controllers;
 
 use craft\web\Controller;
 use yii\web\Response;
@@ -8,6 +8,29 @@ use yii\web\Response;
 class RoutesController extends Controller
 {
     protected array|bool|int $allowAnonymous = true;
+
+    public function actionGet(): Response
+    {
+        $app = \Craft::$app;
+        $primarySiteUid = $app->sites->primarySite->uid;
+        $sections = $app->sections->allSections;
+        $sectionRoutes = [];
+        foreach ($sections as $section) {
+            $formattedRoute = $this->formatSection($section);
+            if ($formattedRoute) {
+                $sectionRoutes[] = $formattedRoute;
+            }
+        }
+        $categories = $app->categories->allGroups;
+        $categoryRoutes = [];
+        foreach ($categories as $category) {
+            $formattedCategory = $this->formatCategory($category);
+            if ($formattedCategory) {
+                $categoryRoutes[] = $formattedCategory;
+            }
+        }
+        return $this->asJson(array_merge($sectionRoutes, $categoryRoutes));
+    }
 
     public function formatSection(\Craft\models\section $section)
     {
@@ -39,6 +62,7 @@ class RoutesController extends Controller
             'uri' => $uriFormats
         ];
     }
+
     public function formatCategory(\Craft\models\CategoryGroup $group)
     {
         $config = $group->config;
@@ -59,27 +83,5 @@ class RoutesController extends Controller
             'typeName' => "{$group['handle']}_category",
             'uri' => $uriFormats
         ];
-    }
-    public function actionGet(): Response
-    {
-        $app = \Craft::$app;
-        $primarySiteUid = $app->sites->primarySite->uid;
-        $sections = $app->sections->allSections;
-        $sectionRoutes = [];
-        foreach ($sections as $section) {
-            $formattedRoute = $this->formatSection($section);
-            if ($formattedRoute) {
-                $sectionRoutes[] = $formattedRoute;
-            }
-        }
-        $categories = $app->categories->allGroups;
-        $categoryRoutes = [];
-        foreach ($categories as $category) {
-            $formattedCategory = $this->formatCategory($category);
-            if ($formattedCategory) {
-                $categoryRoutes[] = $formattedCategory;
-            }
-        }
-        return $this->asJson(array_merge($sectionRoutes, $categoryRoutes));
     }
 }

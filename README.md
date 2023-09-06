@@ -1,8 +1,8 @@
-# graphql-routes
+# routes-api
 
 Adds a controller to generate a routes config file.
 
-The controller is available at `/actions/graphql-routes/routes/get`.
+The generated endpoint is `/actions/routes-api/routes/get`.
 
 ## Requirements
 
@@ -14,7 +14,7 @@ You can install this plugin from the Plugin Store or with Composer.
 
 #### From the Plugin Store
 
-Go to the Plugin Store in your project’s Control Panel and search for “graphql-routes”. Then press “Install”.
+Go to the Plugin Store in your project’s Control Panel and search for “routes-api”. Then press “Install”.
 
 #### With Composer
 
@@ -25,8 +25,8 @@ Open your terminal and run the following commands:
 cd /path/to/my-project.test
 
 # tell Composer to load the plugin
-composer require felix/craft-graphql-routes
+composer require deuxhuithuit/routes-api
 
 # tell Craft to install the plugin
-./craft plugin/install graphql-routes
+./craft plugin/install routes-api
 ```
