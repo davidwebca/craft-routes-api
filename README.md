@@ -14,7 +14,7 @@ You can install this plugin from the Plugin Store or with Composer.
 
 #### From the Plugin Store
 
-Go to the Plugin Store in your project’s Control Panel and search for “routes-api”. Then press “Install”.
+Go to the Plugin Store in your project’s Control Panel and search for “craft-routes-api”. Then press “Install”.
 
 #### With Composer
 
