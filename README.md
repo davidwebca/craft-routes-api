@@ -1,4 +1,4 @@
-# craft-routes-api
+# Craft CMS: Routes API
 
 Adds a controller to generate a routes config file.
 
@@ -22,5 +22,5 @@ cd /path/to/my-project.test
 composer require deuxhuithuit/craft-routes-api
 
 # tell Craft to install the plugin
-./craft plugin/install craft-routes-api
+./craft plugin/install routes-api
 ```
