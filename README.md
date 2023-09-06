@@ -10,13 +10,7 @@ This plugin requires Craft CMS 4.5.0 or later, and PHP 8.0.2 or later.
 
 ## Installation
 
-You can install this plugin from the Plugin Store or with Composer.
-
-#### From the Plugin Store
-
-Go to the Plugin Store in your project’s Control Panel and search for “craft-routes-api”. Then press “Install”.
-
-#### With Composer
+You can install this plugin with Composer.
 
 Open your terminal and run the following commands:
 
