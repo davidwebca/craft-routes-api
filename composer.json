@@ -1,5 +1,5 @@
 {
-    "name": "deuxhuithuit/routes-api",
+    "name": "deuxhuithuit/craft-routes-api",
 	"description": "Adds a controller to generate a routes config file.",
     "type": "craft-plugin",
 	"version": "1.0.0",
@@ -12,9 +12,9 @@
 	],
 	"support": {
 		"email": "open-source@deuxhuithuit.com",
-		"issues": "https://github.com/DeuxHuitHuit/routes-api/issues?state=open",
-		"source": "https://github.com/DeuxHuitHuit/routes-api",
-		"docs": "https://github.com/DeuxHuitHuit/routes-api/blob/main/README.md"
+		"issues": "https://github.com/DeuxHuitHuit/craft-routes-api/issues?state=open",
+		"source": "https://github.com/DeuxHuitHuit/craft-routes-api",
+		"docs": "https://github.com/DeuxHuitHuit/craft-routes-api/blob/main/README.md"
 	},
     "require": {
         "php": ">=8.0.2",
